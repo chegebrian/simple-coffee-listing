@@ -6,6 +6,19 @@ const coffeeContext = createContext()
 
 function CoffeeProvider({ children }) {
     const [coffee, setCoffee] = useState([])
+    const [filteredCoffee, setFilteredCoffee] = useState("all")
+
+    const filter = coffee?.filter((c) => c.available )
+
+    function FilteredData() {
+        let coffeeFiltered = coffee
+
+        if (filteredCoffee !== "all") return filter;
+
+        return coffeeFiltered;
+    }
+
+    const filteredData = FilteredData()
 
     useEffect(() => {
         async function fectchCoffee() {
@@ -22,9 +35,11 @@ function CoffeeProvider({ children }) {
         fectchCoffee()
     }, [])
     return (
-        <coffeeContext.Provider value={{ coffee }}>{children}</coffeeContext.Provider>
+        <coffeeContext.Provider value={{ coffee, filteredData, setFilteredCoffee }}>{children}</coffeeContext.Provider>
     )
 }
+
+
 
 function useCoffeeApi() {
     const context = useContext(coffeeContext)

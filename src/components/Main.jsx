@@ -4,12 +4,12 @@ import { useCoffeeApi } from '../contexts/CoffeeApi'
 import CoffeeCard from './CoffeeCard'
 
 function Main() {
-   const {coffee} = useCoffeeApi()
+   const {coffee, filteredData} = useCoffeeApi()
     return (
-        <main>
+        <main className='flex items-center flex-col gap-8'>
             <Filter />
-            <section>
-                {coffee?.map((item) => <CoffeeCard coffee={item} key={item.id}/>)}
+            <section className='grid sm:grid-cols-2 sm:gap-6 md:grid-cols-3 md:gap-6 px-8'>
+                {filteredData?.map((item) => <CoffeeCard coffee={item} key={item.id}/>)}
             </section>
         </main>
     )

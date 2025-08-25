@@ -7,10 +7,10 @@ function App() {
 
 
   return (
-    <>
+    <div className='max-w-5xl mx-auto'>
       <Header />
       <Main />
-    </>
+    </div>
   )
 }
 
