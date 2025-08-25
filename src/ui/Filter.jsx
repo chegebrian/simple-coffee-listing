@@ -3,7 +3,7 @@ import Button from './Button'
 
 function Filter() {
     return (
-        <div>
+        <div className='flex items-center gap-8'>
             <Button>all products</Button>
             <Button>available now</Button>
         </div>

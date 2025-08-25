@@ -2,7 +2,7 @@ import React from 'react'
 
 function Button({children}) {
   return (
-    <button>{children}</button>
+    <button className='capitalize cursor-pointer font-semibold'>{children}</button>
   )
 }
 
