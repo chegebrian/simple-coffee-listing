@@ -6,8 +6,11 @@ import { CoffeeProvider } from './contexts/CoffeeApi.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <CoffeeProvider>
-      <App />
-    </CoffeeProvider>
+    <div className='bg-[url(/images/bg-cafe-lg.jpg)] object-contain'>
+
+      <CoffeeProvider>
+        <App />
+      </CoffeeProvider>
+    </div>
   </StrictMode>,
 )
