@@ -20,7 +20,7 @@ function CoffeeCard({coffee}) {
             <div className='flex flex-col gap-3 py-4'>
                 <div className='flex items-center justify-between'>
                     <h3>{name}</h3>
-                    <span>{price}</span>
+                    <span className='font-semibold'>{price}</span>
                 </div>
                 <div className='flex items-center gap-2'>
                     <img src="/images/Star_fill.svg" alt="star-icon-image" />

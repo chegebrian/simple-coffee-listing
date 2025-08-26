@@ -35,7 +35,7 @@ function CoffeeProvider({ children }) {
         fectchCoffee()
     }, [])
     return (
-        <coffeeContext.Provider value={{ coffee, filteredData, setFilteredCoffee }}>{children}</coffeeContext.Provider>
+        <coffeeContext.Provider value={{ coffee, filteredData, setFilteredCoffee,filteredCoffee }}>{children}</coffeeContext.Provider>
     )
 }
 
