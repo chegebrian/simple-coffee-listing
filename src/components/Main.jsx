@@ -4,7 +4,7 @@ import { useCoffeeApi } from '../contexts/CoffeeApi'
 import CoffeeCard from './CoffeeCard'
 
 function Main() {
-   const {coffee, filteredData} = useCoffeeApi()
+   const { filteredData} = useCoffeeApi()
     return (
         <main className='flex items-center flex-col gap-8'>
             <Filter />
