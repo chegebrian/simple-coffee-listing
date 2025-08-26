@@ -6,7 +6,7 @@ import { CoffeeProvider } from './contexts/CoffeeApi.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className='bg-[url(/images/bg-cafe-lg.jpg)] object-contain'>
+    <div className='bg-[url(/images/bg-cafe-lg.jpg)] object-cover h-screen flex items-center justify-center'>
 
       <CoffeeProvider>
         <App />
